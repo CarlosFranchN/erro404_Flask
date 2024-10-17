@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>
+        {% block title %}
+          Meu Site
+        {% endblock  %}
+    </title>
+    <link
+      rel="stylesheet"
+      href="{{ url_for('static', filename='css/base.css') }}"
+    /> 
+    <link
+    rel="stylesheet"
+    href="{{ url_for('static', filename='css/error.css') }}"
+  />
+  <link rel="stylesheet" href="{{ url_for('static', filename=config['FONT_AWESOME_LOCAL']) if not config['USE_CDN'] else config['FONT_AWESOME_CDN'] }}">
+  </head>
+  <body>
+    <header>
+      <nav>
+        <ul>
+          <li><a href="/"><i class="fa-solid fa-house"></i></a></li>
+          <li><a href="#"><i class="fa-solid fa-circle-info"></i></a></li>
+          <li><a href="https://github.com/CarlosFranchN"><i class="fa-brands fa-github"></i></a></li>
+          <li><a href="www.linkedin.com/in/carlos-neto-91191723a"><i class="fa-brands fa-linkedin"></i></a></li>
+        </ul>
+      </nav>
+    </header>
+    <main>{% block main %} {% endblock %}</main>
+    <footer>
+      <p>&copy; 2024 Meu Site | Todos os direitos para alguem</p>
+    </footer>
+  </body>
+  <script src="{{ url_for("static", filename='js/app.js') }}"></script>
+</html>

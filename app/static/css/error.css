@@ -1,0 +1,27 @@
+/* styles.css */
+.error-container {
+    text-align: center;
+    margin: 0 auto;
+    padding: 1rem;
+    max-width: 100rem;
+    background-color: #fff;
+    border-radius: .7rem;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 2rem;
+}
+
+h1 {
+    color: #fc6b74;
+}
+
+a {
+    color: #007bff;
+    text-decoration: none;
+}
+
+a:hover {
+    text-decoration: underline;
+}
